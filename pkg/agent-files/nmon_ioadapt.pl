@@ -26,11 +26,11 @@ foreach(@descript){
 	#Rearrange the descript
 	#from something like fcs7_write-KB/s
 	#to fcs7.write-KB etc
-	$descript_split = split(/_/, $_);
-	$instance = $descript_split[0];
-	$metric = $descript_split[1];
+	@descript_split = split("_", $_);
+	$instance = @descript_split[0];
+	$metric = @descript_split[1];
 	#chop off the '/s' from the metric if needed
-	if (index($metric, '/s') == 1)
+	if (index($metric, '/s') >= 1)
 	{
 		$metric = substr($metric , 0, -2);
 	}
