@@ -21,6 +21,7 @@ if(($validate{"IOADAPT"}!=2) || ($validate{"ZZZZ"}!=1)){
 	die "Not all expected data is available";
 }
 
+my %values;
 
 foreach(@descript){
 	#Rearrange the descript
@@ -36,9 +37,33 @@ foreach(@descript){
 	}
 	
 
+
 	$uptime_metric = join('.', $instance, $metric);
 
 	$stat=pop(@stats);
+	$values{$instance}{$metric} = $stat;
 	push(@filtered,join(" ",$uptime_metric,$stat));
 }
-print join("\n",@filtered), "\n";
+
+#loop through the values and caculate Average Block size
+# (writeKB + readKB ) * 8 / xfer-tps = Average Block size in kb
+foreach my $key1 (sort keys %values)
+{
+	$writeKB =  $values{$key1}->{"write-KB"};
+	$readKB = $values{$key1}->{"read-KB"};
+	$tps = $values{$key1}->{"xfer-tps"};
+
+	$blocksize = ( ($writeKB + $readKB ) * 8 )  / $tps;
+	$values{$key1}{"Block-Size"} = $blocksize;
+}
+
+
+#Print the final output in ranged data friendly format for uptime
+#ie. fcs0.Block-Size 1
+foreach my $key1 (sort keys %values)
+{
+	foreach my $key2 (sort keys %{$values{$key1}})
+	{
+		printf ("%s.%s %.1f \n" , $key1, $key2,  $values{$key1}->{$key2} );
+	}
+}
