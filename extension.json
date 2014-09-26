@@ -1,0 +1,22 @@
+[
+  {
+        "category": "Operating System Monitors",
+        "supported_versions": [
+                "7.3"
+        ],
+        "name": "AIX VIOS Monitor",
+        "git_file_target": "https://github.com/uptimesoftware/monitor-aix-vios/raw/master/dist/monitor-aix-vios.zip",
+        "icon_url": "http://the-grid.uptimesoftware.com/img/posts/placeholder-logo.png",
+        "upgrade_in_place": true,
+        "requires_additional_setup": false,
+        "requires_agent_scripts": true,
+        "version": "0.1",
+        "supported_platforms": [
+            "windows",
+            "linux"
+        ],
+        "grid_url_target": "https://github.com/uptimesoftware/monitor-aix-vios",
+        "type": "plugin",
+        "description": "Monitor AIX Virtual I/O Usage Metrics"
+  }
+]
