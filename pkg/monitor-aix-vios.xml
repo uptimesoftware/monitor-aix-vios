@@ -56,6 +56,18 @@
                 <integer/>
             </gui_type>
         </element>
+        <element name="password" parameter_type="input" data_type="string" gui_basic="1" range_type="0" hidden="false">
+            <control_options> size:40 </control_options>
+            <default_value></default_value>
+            <short_description>Agent Password</short_description>
+            <long_description>Agent Password</long_description>
+            <error_message>
+                <alphanumeric>required field</alphanumeric>
+            </error_message>
+            <gui_type>
+                <password />
+            </gui_type>
+        </element>
         <element name="read-KB" parameter_type="output" data_type="ranged" gui_basic="1" units="KBps" range_type="0">
             <control_options>size:10</control_options>
             <default_value/>
