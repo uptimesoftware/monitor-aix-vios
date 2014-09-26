@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uptime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="5.0" target_grouping="other">
-    <class>monitor-aix-vios</class>
+    <class>AIX VIOS Monitor</class>
     <exec>com.uptimesoftware.uptime.erdc.MonitorCustomScriptRunner</exec>
     <erdc_version>0.1</erdc_version>
     <category>Advanced and Script Monitors</category>
@@ -125,5 +125,5 @@
             </gui_type>
         </element>
     </elements>
-    <help>Locally Mirror the Status of a Monitor/Element from a Remote Up.time Instance's API</help>
+    <help>Monitor AIX Virtual I/O Usage Metrics </help>
 </uptime>
