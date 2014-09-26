@@ -3,7 +3,8 @@
     <class>AIX VIOS Monitor</class>
     <exec>com.uptimesoftware.uptime.erdc.MonitorCustomScriptRunner</exec>
     <erdc_version>0.1</erdc_version>
-    <category>Advanced and Script Monitors</category>
+    <category>Operating System Monitors</category>
+    <category_related>Advanced and Script Monitors</category_related>
     <grid_info>
         <supported_versions>7.3</supported_versions>
         <supported_platforms>windows, linux</supported_platforms>
@@ -101,7 +102,7 @@
                 <decimal/>
             </gui_type>
         </element>
-        <element name="Block-Size" parameter_type="output" data_type="ranged" gui_basic="1" units="KB" range_type="0">
+        <element name="Block-Size" parameter_type="output" data_type="ranged" gui_basic="1" units="kb" range_type="0">
             <control_options>size:10</control_options>
             <default_value/>
             <short_description>Block Size</short_description>
