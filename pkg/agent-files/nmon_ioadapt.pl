@@ -42,7 +42,7 @@ foreach(@descript){
 
 	$stat=pop(@stats);
 	$values{$instance}{$metric} = $stat;
-	push(@filtered,join(" ",$uptime_metric,$stat));
+
 }
 
 #loop through the values and caculate Average Block size
