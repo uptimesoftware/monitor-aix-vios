@@ -15,6 +15,7 @@ Agent Side Script Setup Steps
  chown uptime:staff nmon_ioadapt.pl
  ```
  4. Update the uptime agent's /opt/uptime-agent/bin/.uptmpasswd file and add the following line:
+
  ```
      aix-vios /opt/uptime-agent/scripts/uptime_nmon_ioadapt.ksh
  ```
