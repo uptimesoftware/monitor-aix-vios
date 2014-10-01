@@ -1,0 +1,8 @@
+name=AIX VIOS Monitor
+version=0.1
+platforms=windows linux
+description=Monitor AIX Virtual IO Usage Metrics 
+requiresAgentScript=true
+restartCore=false
+onUpgradeRemoveFiles=true
+onUpgradeRemoveMonitors=false
