@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uptime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="5.0" target_grouping="other">
+<uptime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.uptimesoftware.com/erdc/erdc erdc"
+    xmlns="http://www.uptimesoftware.com/erdc/erdc"
+    xmlns:upt="http://www.uptimesoftware.com/erdc/erdc" version="4.0" target_grouping="other">
     <class>AIX VIOS Monitor</class>
     <exec>com.uptimesoftware.uptime.erdc.MonitorCustomScriptRunner</exec>
-    <erdc_version>0.1</erdc_version>
     <elements>
-        <element name="process" parameter_type="input" data_type="string" gui_basic="1" range_type="0" hidden="true">
+        <element name="process" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
             <control_options> size:40 </control_options>
             <default_value>scripts/monitor-aix-vios/monitor.bat</default_value>
             <short_description>Script Name</short_description>
@@ -19,7 +21,7 @@
                 <string/>
             </gui_type>
         </element>
-        <element name="port" parameter_type="input" data_type="integer" gui_basic="1" range_type="0" hidden="false">
+        <element name="port" parameter_type="input" data_type="integer" gui_basic="1" range_type="0">
             <control_options> size:40 </control_options>
             <default_value>9998</default_value>
             <short_description>Agent Port</short_description>
@@ -34,7 +36,7 @@
                 <integer/>
             </gui_type>
         </element>
-        <element name="password" parameter_type="input" data_type="string" gui_basic="1" range_type="0" hidden="false">
+        <element name="password" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
             <control_options> size:40 </control_options>
             <default_value></default_value>
             <short_description>Agent Password</short_description>
